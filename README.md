@@ -8,7 +8,18 @@
 </p>
 
 ## About Laravel
-## TEST
+## How to get
+# Local setup 
+
+git clone
+composer install
+php artisan key:generate
+php artisan migrate
+npm install
+
+# Starting the TriathlonTool
+php artisan serv
+npm run dev
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
