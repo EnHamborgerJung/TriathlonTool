@@ -2,11 +2,8 @@
 
 namespace App\Models;
 
-class ActivityBike extends AbstractActivity
+
+class ActivityBike extends AbstractActivities
 {
 
-
-    public function __construct()
-    {
-    }
 }

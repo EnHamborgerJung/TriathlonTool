@@ -2,19 +2,23 @@
 
 namespace App\Models;
 
-class Triathlon
-{
-    private $swim;
-    private $run;
-    private $bike;
+use Illuminate\Database\Eloquent\Model;
 
-    public function __construct(ActivitySwim $swim, ActivityBike $bike, ActivityRun $run) {
-        $this->swim = $swim;
-        $this->bike = $bike;
-        $this->run = $run;
+class Triathlon extends Model
+{
+    public function createTriathlon($input)
+    {
+        $this->activities = [
+                ActivitySwim::create($input['inputSwim']),
+                new ActivityTransition($activity['inputTransitionOne']['time']),
+                new ActivityBike($activity['inputBike']['distance'], $activity['inputBike']['time']),
+                new ActivityTransition($activity['inputTransitionTow']['time']),
+                new ActivityRun($activity['inputRun']['distance'], $activity['inputRun']['time']),
+            ];
+
+
     }
 
 
+
 }
-
-

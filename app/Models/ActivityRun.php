@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class ActivityRun extends AbstractActivity
+class ActivityRun
 {
-
+    public $timestamps = false;
 }
